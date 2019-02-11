@@ -13,6 +13,26 @@
 		<title>Universal Converter</title>
 	</head>
 	<body>
-		hola
+		<div>
+			<label>FROM: <i id="i-from"></i></label>
+			<select name="from" id="select-from">
+				<option value="1">Nanometers</option>
+				<option value="2">Milimeters</option>
+				<option value="3">Centimeters</option>
+				<option value="4">Meters</option>
+			</select>
+		</div>
+		<div>
+			<label>TO: <i id="i-to"></i></label>
+			<select name="to" id="select-to">
+				<option value="1">Nanometers</option>
+				<option value="2">Milimeters</option>
+				<option value="3">Centimeters</option>
+				<option value="4">Meters</option>
+			</select>
+		</div>
+		<div><input type="number" id="input-from" placeholder="to convert..." maxlength="20" /></div>
+		<div><button id="button-convert">CONVERT</button></div>
+		<div><label id="label-result"></label></div>
 	</body>
 </html>
