@@ -1,0 +1,34 @@
+{
+  "name": "universal-converter",
+  "version": "1.0.0",
+  "description": "Simple JavaScript excercise for beginners in webpack, babel and GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfernandezag/universal-converter.git"
+  },
+  "keywords": [
+    "Webpack",
+    "Babel",
+    "JavaScript",
+    "GitHub",
+    "Web"
+  ],
+  "author": "Julio Daniel Fernandez Aguirre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielfernandezag/universal-converter/issues"
+  },
+  "homepage": "https://github.com/danielfernandezag/universal-converter#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "live-server": "^1.2.1",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
