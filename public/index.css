@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Muli', Tahoma, Geneva, Verdana, sans-serif;
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	max-width: 100%;
+	background: #d4b746;
+	background: linear-gradient(180deg, #d4b746 0%, #edcd4d 50%, #f3d250 100%);
+}
