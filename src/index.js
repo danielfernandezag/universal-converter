@@ -1,6 +1,4 @@
-function sameConversion(value) {
-	return value;
-}
+import { evaluateConversion } from './conversionHelper';
 
 (function main() {
 	const selectFrom = document.querySelector('#select-from');
@@ -17,10 +15,13 @@ function sameConversion(value) {
 		iTo.textContent = e.target.options[e.target.selectedIndex].label;
 	});
 	buttonConvert.addEventListener('click', () => {
-		const currentFrom = parseInt(selectFrom.value);
-		const currentTo = parseInt(selectTo.value);
+		const currentFrom = selectFrom.value;
+		const currentTo = selectTo.value;
+		const currentValue = parseFloat(inputFrom.value);
 		if (currentFrom === currentTo) {
-			const result = sameConversion(parseFloat(inputFrom.value));
+			labelResult.textContent = `${currentValue} ${selectTo.options[selectTo.selectedIndex].label}`;
+		} else {
+			const result = evaluateConversion(currentTo, currentFrom, currentValue);
 			labelResult.textContent = `${result} ${selectTo.options[selectTo.selectedIndex].label}`;
 		}
 	});

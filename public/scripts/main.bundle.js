@@ -1,8 +1,6 @@
 'use strict';
 
-function sameConversion(value) {
-	return value;
-}
+var _conversionHelper = require('./conversionHelper');
 
 (function main() {
 	var selectFrom = document.querySelector('#select-from');
@@ -19,10 +17,13 @@ function sameConversion(value) {
 		iTo.textContent = e.target.options[e.target.selectedIndex].label;
 	});
 	buttonConvert.addEventListener('click', function () {
-		var currentFrom = parseInt(selectFrom.value);
-		var currentTo = parseInt(selectTo.value);
+		var currentFrom = selectFrom.value;
+		var currentTo = selectTo.value;
+		var currentValue = parseFloat(inputFrom.value);
 		if (currentFrom === currentTo) {
-			var result = sameConversion(parseFloat(inputFrom.value));
+			labelResult.textContent = currentValue + ' ' + selectTo.options[selectTo.selectedIndex].label;
+		} else {
+			var result = (0, _conversionHelper.evaluateConversion)(currentTo, currentFrom, currentValue);
 			labelResult.textContent = result + ' ' + selectTo.options[selectTo.selectedIndex].label;
 		}
 	});
